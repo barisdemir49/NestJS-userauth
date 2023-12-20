@@ -8,10 +8,10 @@ import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
-    ThrottlerModule.forRoot({
+    ThrottlerModule.forRoot([{
       ttl: 30,
       limit: 10,
-    }),
+    }]),
     ...databaseProviders,
     UsersModule,
   ],
